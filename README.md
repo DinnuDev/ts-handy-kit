@@ -44,8 +44,9 @@ console.log(getDateString('2024-06-01T12:34:56Z')); // "2024-06-01"
 // Get only the time part
 console.log(getTimeString('2024-06-01T12:34:56Z')); // "12:34:56"
 
-// Convert time to another time zone (IANA format)
-console.log(convertTimeZone('2024-06-01T12:00:00Z', 'Asia/Kolkata')); // e.g. "2024-06-01T17:30:00.000Z"
+// Convert time to another time zone (three-letter code: UTC, EST, IST, etc.)
+console.log(convertTimeZone('2024-06-01T12:00:00Z', 'IST')); // e.g. "2024-06-01T17:30:00.000Z"
+console.log(convertTimeZone('2024-06-01T12:00:00Z', 'EST')); // e.g. "2024-06-01T08:00:00.000Z"
 
 // Copy to clipboard (browser only)
 copyToClipboard('Copied text!').then(success => console.log(success));
@@ -97,8 +98,8 @@ console.log(isValidDate('invalid-date')); // false
 - **throttle(fn, wait): Function**  
   Returns a throttled version of the function that only executes once per `wait` milliseconds.
 
-- **convertTimeZone(dateStr, timeZone): string**  
-  Converts a date/time string to a specified IANA time zone (e.g., 'Asia/Kolkata', 'America/New_York').
+- **convertTimeZone(dateStr, zone): string**  
+  Converts a date/time string to a specified three-letter time zone code (`UTC`, `EST`, `IST`, etc.).
 
 - **copyToClipboard(text): Promise<boolean>**  
   Copies a string to the clipboard (browser only).
