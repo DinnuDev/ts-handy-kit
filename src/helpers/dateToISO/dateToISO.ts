@@ -5,7 +5,12 @@
  */
 export function dateToISO(input: unknown): string {
   const date = new Date(input as any);
-  return isNaN(date.getTime()) ? '' : date.toISOString();
+  if (
+    isNaN(date.getTime()) ||
+    date.toISOString() === '1970-01-01T00:00:00.000Z'
+  )
+    return '';
+  return date.toISOString();
 }
 
 /**
@@ -15,7 +20,12 @@ export function dateToISO(input: unknown): string {
  */
 export function getDateString(input: unknown): string {
   const date = new Date(input as any);
-  return isNaN(date.getTime()) ? '' : date.toISOString().slice(0, 10);
+  if (
+    isNaN(date.getTime()) ||
+    date.toISOString() === '1970-01-01T00:00:00.000Z'
+  )
+    return '';
+  return date.toISOString().slice(0, 10);
 }
 
 /**
@@ -25,5 +35,10 @@ export function getDateString(input: unknown): string {
  */
 export function getTimeString(input: unknown): string {
   const date = new Date(input as any);
-  return isNaN(date.getTime()) ? '' : date.toISOString().slice(11, 19);
+  if (
+    isNaN(date.getTime()) ||
+    date.toISOString() === '1970-01-01T00:00:00.000Z'
+  )
+    return '';
+  return date.toISOString().slice(11, 19);
 }

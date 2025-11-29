@@ -1,0 +1,1 @@
+export { timeDifference } from './timeDifference';
