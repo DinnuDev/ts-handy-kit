@@ -80,53 +80,55 @@ console.log(isValidDate('invalid-date')); // false
 
 ## Helpers
 
-- **capitalizeFirstLetter(str: unknown): string**  
-  Capitalizes the first letter of a string. Returns an empty string for invalid input.
+```
+capitalizeFirstLetter(str: unknown): string
+    Capitalizes the first letter of a string. Returns an empty string for invalid input.
 
-- **dateToISO(input: unknown): string**  
-  Converts a date/time input to an ISO string. Returns an empty string for invalid input.
+dateToISO(input: unknown): string
+    Converts a date/time input to an ISO string. Returns an empty string for invalid input.
 
-- **getDateString(input: unknown): string**  
-  Returns the date part (YYYY-MM-DD) from a date/time input. Returns an empty string for invalid input.
+getDateString(input: unknown): string
+    Returns the date part (YYYY-MM-DD) from a date/time input. Returns an empty string for invalid input.
 
-- **getTimeString(input: unknown): string**  
-  Returns the time part (HH:mm:ss) from a date/time input. Returns an empty string for invalid input.
+getTimeString(input: unknown): string
+    Returns the time part (HH:mm:ss) from a date/time input. Returns an empty string for invalid input.
 
-- **debounce(fn, wait): Function**  
-  Returns a debounced version of the function that delays execution until after `wait` milliseconds have elapsed since the last call.
+debounce(fn, wait): Function
+    Returns a debounced version of the function that delays execution until after `wait` milliseconds have elapsed since the last call.
 
-- **throttle(fn, wait): Function**  
-  Returns a throttled version of the function that only executes once per `wait` milliseconds.
+throttle(fn, wait): Function
+    Returns a throttled version of the function that only executes once per `wait` milliseconds.
 
-- **convertTimeZone(dateStr, zone): string**  
-  Converts a date/time string to a specified three-letter time zone code (`UTC`, `EST`, `IST`, etc.).
+convertTimeZone(dateStr, zone): string
+    Converts a date/time string to a specified three-letter time zone code (`UTC`, `EST`, `IST`, etc.).
 
-- **copyToClipboard(text): Promise<boolean>**  
-  Copies a string to the clipboard (browser only).
+copyToClipboard(text): Promise<boolean>
+    Copies a string to the clipboard (browser only).
 
-- **dateDifference(date1, date2): number**  
-  Returns the difference in days between two dates.
+dateDifference(date1, date2): number
+    Returns the difference in days between two dates.
 
-- **timeDifference(time1, time2): number**  
-  Returns the difference in milliseconds between two times.
+timeDifference(time1, time2): number
+    Returns the difference in milliseconds between two times.
 
-- **isFalsy(value): boolean**  
-  Checks if a value is falsy in JavaScript.
+isFalsy(value): boolean
+    Checks if a value is falsy in JavaScript.
 
-- **retry(fn, retries): Promise<any>**  
-  Retries an async function a specified number of times.
+retry(fn, retries): Promise<any>
+    Retries an async function a specified number of times.
 
-- **scrollToTop(): void**  
-  Scrolls the window to the top (browser only).
+scrollToTop(): void
+    Scrolls the window to the top (browser only).
 
-- **getCurrentDateISO(): string**  
-  Returns the current date in ISO format (YYYY-MM-DD).
+getCurrentDateISO(): string
+    Returns the current date in ISO format (YYYY-MM-DD).
 
-- **getCurrentTimeString(): string**  
-  Returns the current time in HH:mm:ss format.
+getCurrentTimeString(): string
+    Returns the current time in HH:mm:ss format.
 
-- **isValidDate(dateStr): boolean**  
-  Checks if a date string is valid.
+isValidDate(dateStr): boolean
+    Checks if a date string is valid.
+```
 
 ## Contributing
 

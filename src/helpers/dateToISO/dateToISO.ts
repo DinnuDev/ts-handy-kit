@@ -4,7 +4,7 @@
  * @returns ISO string or empty string if invalid.
  */
 export function dateToISO(input: unknown): string {
-  const date = new Date(input as any);
+  const date = new Date(input as Date | string | number);
   if (
     isNaN(date.getTime()) ||
     date.toISOString() === '1970-01-01T00:00:00.000Z'
@@ -19,7 +19,7 @@ export function dateToISO(input: unknown): string {
  * @returns Date string or empty string if invalid.
  */
 export function getDateString(input: unknown): string {
-  const date = new Date(input as any);
+  const date = new Date(input as Date | string | number);
   if (
     isNaN(date.getTime()) ||
     date.toISOString() === '1970-01-01T00:00:00.000Z'
@@ -34,7 +34,7 @@ export function getDateString(input: unknown): string {
  * @returns Time string or empty string if invalid.
  */
 export function getTimeString(input: unknown): string {
-  const date = new Date(input as any);
+  const date = new Date(input as Date | string | number);
   if (
     isNaN(date.getTime()) ||
     date.toISOString() === '1970-01-01T00:00:00.000Z'
