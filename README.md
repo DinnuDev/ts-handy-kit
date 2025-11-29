@@ -1,6 +1,6 @@
 # ts-handy-kit
 
-A collection of useful TypeScript helper functions for string, date/time manipulation, and function utilities.
+A collection of useful TypeScript helper functions for string, date/time manipulation, accessibility, and function utilities.
 
 ## Installation
 
@@ -128,6 +128,35 @@ getCurrentTimeString(): string
 
 isValidDate(dateStr): boolean
     Checks if a date string is valid.
+
+--- Accessibility & ARIA Helpers ---
+
+ariaPropTypes: string[]
+    List of valid ARIA attribute names.
+
+isAriaDisabled(props: { 'aria-disabled'?: boolean | string }): boolean
+    Checks if ARIA disabled is set in props.
+
+getAriaProps(props: Record<string, any>): Record<string, any>
+    Returns only ARIA props from an object.
+
+getAriaRole(props: Record<string, any>): string | undefined
+    Returns the ARIA role from props.
+
+createAriaAttributes(config: Record<string, any>): Record<string, any>
+    Creates ARIA attributes from a config object.
+
+generateId(prefix?: string): string
+    Generates a unique ID for ARIA attributes.
+
+visuallyHiddenStyle: React.CSSProperties
+    CSS style for visually hidden elements.
+
+getActiveElement(): Element | null
+    Returns the currently active (focused) element in the document.
+
+isActiveElementFocusable(): boolean
+    Checks if the currently active element is focusable.
 ```
 
 ## Contributing
